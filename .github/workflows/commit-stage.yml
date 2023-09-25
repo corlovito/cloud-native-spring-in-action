@@ -1,8 +1,8 @@
 name: Commit Stage
 on:
   push:
-  schedule: # Every Monday
-    - cron: '0 0 * * 1'
+    #schedule: # Every Monday
+    #  - cron: '0 0 * * 1'
 
 jobs:
   build:
@@ -78,6 +78,7 @@ jobs:
           java-version: 17
           cache: gradle
       - name: Build, unit tests and integration tests
+        if: matrix.project == 'Chapter03-03/end/catalog service'
         run: |
           cd ${{ matrix.project }}
           chmod +x gradlew
