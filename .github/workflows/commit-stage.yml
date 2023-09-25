@@ -5,7 +5,7 @@ on:
       project:
         description: 'Spring boot'
         required: true
-        default: 'Chapter03/03-end/catalog-service,'
+        default: 'Chapter03/03-end/catalog-service'
   #push:
     #schedule: # Every Monday
     #  - cron: '0 0 * * 1'
